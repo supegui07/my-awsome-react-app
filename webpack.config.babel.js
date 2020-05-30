@@ -1,29 +1,26 @@
-import merge from 'webpack-merge'
-import config from './src/config'
-import {
-  development,
-  production
-} from './src/config/webpackEnv'
+import merge from "webpack-merge";
+import config from "./src/config";
+import { development, production } from "./src/config/webpackEnv";
 
-const envConfig = config.env.match(/development|test/) ? development : production
+const envConfig = config.env.match(/development|test/) ? development : production;
 
-console.log(development)
+console.log(development);
 export default merge({}, envConfig, {
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: [".js", ".jsx"],
   },
   module: {
     rules: [
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: 'babel-loader'
+        loader: "babel-loader",
       },
       {
         test: /\.(png|jpg|svg)$/,
         exclude: /node_modules/,
-        loaders: 'file-loader'
-      }
-    ]
-  }
-})
+        loaders: "file-loader",
+      },
+    ],
+  },
+});
