@@ -4,6 +4,7 @@ import OptimizeCSSAssetsPlugin from "optimize-css-assets-webpack-plugin";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import UglifyJsPlugin from "uglifyjs-webpack-plugin";
 import config from "./index";
+import "@babel/polyfill";
 
 console.log("here");
 export const development = {

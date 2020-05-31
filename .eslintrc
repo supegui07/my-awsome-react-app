@@ -25,6 +25,8 @@
   "rules": {
     "no-console": "warn",
     "no-eval": "error",
-    "import/first": "error"
+    "import/first": "error",
+    "indent": [2, 2, {"SwitchCase": 1}],
+    "prettier/prettier": "off"
   }
 }

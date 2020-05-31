@@ -1,6 +1,6 @@
 {
   "lint-staged": {
     "*.+(js|jsx)": ["eslint --fix", "git add"],
-    "*.+(json|css|less|sass|md)": ["prettier --write", "git add"]
+    "*.+(json|css|less|scss|md)": ["prettier --write", "git add"]
   }
 }
