@@ -1,9 +1,7 @@
 {
   "name": "react-client",
   "verbose": true,
-  "setupFilesAfterEnv": ["./node_modules/jest-enzyme/lib/index.js"],
-  "testEnvironment": "enzyme",
-  "snapshotSerializers": ["enzyme-to-json/serializer"],
+  "testEnvironment": "jest-environment-jsdom-sixteen",
   "setupFiles": ["./test/helpers.js"],
   "moduleNameMapper": {
     "\\.(css|scss)$": "identity-obj-proxy",

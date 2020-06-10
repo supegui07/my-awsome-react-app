@@ -4,7 +4,7 @@ import InputGroupContainer from "./InputGroupContainer";
 import Label from "../Label/Label";
 import InputText from "../InputText/InputText";
 
-const InputGroup = ({ text, value, onChange, placeholder }) => {
+const InputGroup = ({ text, value, onChange, placeholder, type }) => {
   return (
     <InputGroupContainer onChange={onChange}>
       {({ getLabelProps, getInputTextProps }) => {
@@ -20,6 +20,7 @@ const InputGroup = ({ text, value, onChange, placeholder }) => {
                 value,
                 onChange,
                 placeholder,
+                type,
               })}
             />
           </div>
@@ -34,6 +35,7 @@ InputGroup.propTypes = {
   value: PropTypes.string,
   onChange: PropTypes.func,
   placeholder: PropTypes.string,
+  type: PropTypes.string,
 };
 
 export default InputGroup;

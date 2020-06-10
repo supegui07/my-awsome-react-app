@@ -12,11 +12,11 @@ class InputGroupContainer extends Component {
   inputTextRef = React.createRef();
 
   getInputTextProps = ({ onChange, ...props }) => {
-    console.log(props);
     return {
-      value: this.state.value,
+      value: this.state.inputValue,
       inputTextRef: this.inputTextRef,
       onChange: (value) => {
+        console.log("event fired: ", value);
         this.setState({ inputValue: value }, () => onChange(value));
       },
       ...props,
@@ -38,7 +38,9 @@ class InputGroupContainer extends Component {
   }
 
   render() {
-    return this.props.children(this.getStateAndHelpers());
+    return this.props.children
+      ? this.props.children(this.getStateAndHelpers())
+      : null;
   }
 }
 
