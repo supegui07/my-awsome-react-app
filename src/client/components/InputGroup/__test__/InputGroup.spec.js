@@ -31,7 +31,7 @@ describe("<InputGroup />", () => {
 
     const newValue = "supegui";
     fireEvent.change(input, { target: { value: newValue } });
-    
+
     expect(onChange).toHaveBeenCalledTimes(1);
     expect(onChange).toHaveBeenCalledWith(newValue);
   });
