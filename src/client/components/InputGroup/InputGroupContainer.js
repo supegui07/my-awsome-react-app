@@ -16,7 +16,6 @@ class InputGroupContainer extends Component {
       value: this.state.inputValue,
       inputTextRef: this.inputTextRef,
       onChange: (value) => {
-        console.log("event fired: ", value);
         this.setState({ inputValue: value }, () => onChange(value));
       },
       ...props,
