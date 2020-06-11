@@ -3,18 +3,21 @@ import PropTypes from "prop-types";
 import InputGroupContainer from "./InputGroupContainer";
 import Label from "../Label/Label";
 import InputText from "../InputText/InputText";
+import styles from "./InputGroup.scss";
 
 const InputGroup = ({ text, value, onChange, placeholder, type }) => {
   return (
     <InputGroupContainer onChange={onChange}>
       {({ getLabelProps, getInputTextProps }) => {
         return (
-          <div>
-            <Label
-              {...getLabelProps({
-                text,
-              })}
-            />
+          <div className={styles.inputGroup}>
+            {text && (
+              <Label
+                {...getLabelProps({
+                  text,
+                })}
+              />
+            )}
             <InputText
               {...getInputTextProps({
                 value,

@@ -43,10 +43,9 @@ describe("<InputGroupContainer />", () => {
 
     expect(label.textContent).toBe(text);
     expect(input.placeholder).toBe(placeholder);
-
   });
 
-  it('changes the input value when the user types', () => {
+  it("changes the input value when the user types", () => {
     const { getByLabelText } = setup();
     const { onChange } = fakeInputGroupContainer;
     const input = getByLabelText("input-text");
@@ -56,7 +55,7 @@ describe("<InputGroupContainer />", () => {
 
     expect(onChange).toHaveBeenCalledTimes(1);
     expect(onChange).toHaveBeenCalledWith(newValue);
-  })
+  });
 
   it("focus input when the label is clicked", async () => {
     const { getByText, getByLabelText } = setup();

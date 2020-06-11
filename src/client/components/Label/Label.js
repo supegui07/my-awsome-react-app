@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./Label.scss";
+import styles from "./Label.scss";
 
 const Label = ({ text, onClick }) => {
   const handleClick = () => {
@@ -8,7 +8,7 @@ const Label = ({ text, onClick }) => {
   };
 
   return (
-    <div className="label">
+    <div className={styles.label}>
       <span className="label-text" onClick={handleClick}>
         {text}
       </span>

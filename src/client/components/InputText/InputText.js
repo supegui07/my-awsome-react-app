@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styles from "./InputText.scss";
 
 const InputText = ({ type, value, placeholder, onChange, inputTextRef }) => {
   const handleChange = (e) => {
@@ -9,7 +10,7 @@ const InputText = ({ type, value, placeholder, onChange, inputTextRef }) => {
   return (
     <input
       aria-label="input-text"
-      className="input-text"
+      className={styles.inputText}
       type={type}
       value={value}
       placeholder={placeholder}
